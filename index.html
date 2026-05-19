@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#FAF7F2">
+
+<title>Zrozum siebie. Działaj inaczej. - psychoedukacja ADHD | MindWell</title>
+<meta name="description" content="5 spotkań online z psychologiem MindWell o tym, dlaczego mózg ADHD tak działa - i co z tym zrobić. Pierwsze spotkanie 'Finanse' za 37 zł, 4 czerwca.">
+
+<meta property="og:title" content="Zrozum siebie. Działaj inaczej.">
+<meta property="og:description" content="Psychoedukacja ADHD: 5 spotkań z psychologiem MindWell. Pierwsze za 37 zł, 4 czerwca.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Bricolage Grotesque', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        cream: '#FAF7F2',
+        warm: '#F5EFE6',
+        sand: '#EDE3D3',
+        ink: '#2A1F1A',
+        muted: '#6B5D52',
+        coral: '#D97757',
+        coralDark: '#B85F44',
+        sage: '#8FA68E',
+        sageDeep: '#6B8270',
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+        'pulse-soft': 'pulseSoft 2.5s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'blob': 'blob 12s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(24px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        pulseSoft: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(217, 119, 87, 0.4)' },
+          '50%': { boxShadow: '0 0 0 14px rgba(217, 119, 87, 0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
+        blob: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '33%': { transform: 'translate(30px, -40px) scale(1.1)' },
+          '66%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+        },
+      },
+    }
+  }
+}
+</script>
+
+<style>
+html { scroll-behavior: smooth; }
+body { font-family: 'Bricolage Grotesque', system-ui, sans-serif; }
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+.glass { background: rgba(255, 255, 255, 0.55); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.glass-warm { background: rgba(245, 239, 230, 0.65); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+
+.gradient-text { background: linear-gradient(135deg, #2A1F1A 0%, #6B5D52 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.coral-glow { box-shadow: 0 8px 24px -8px rgba(217, 119, 87, 0.4); }
+.coral-glow:hover { box-shadow: 0 12px 32px -8px rgba(217, 119, 87, 0.55); }
+
+details > summary { list-style: none; cursor: pointer; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] summary .faq-icon { transform: rotate(45deg); }
+.faq-icon { transition: transform 0.3s ease; }
+
+.blob-1 { position: absolute; width: 380px; height: 380px; border-radius: 50%; filter: blur(80px); opacity: 0.5; }
+
+.card-hover { transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -16px rgba(42, 31, 26, 0.15); }
+
+.ring-coral { box-shadow: 0 0 0 4px rgba(217, 119, 87, 0.15), 0 0 0 8px rgba(217, 119, 87, 0.08); }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.visible { opacity: 1; transform: none; transition: none; }
+  .animate-float, .animate-blob, .animate-pulse-soft { animation: none; }
+}
+</style>
+</head>
+
+<body class="bg-cream text-ink antialiased overflow-x-hidden">
+
+<!-- ============ NAV ============ -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-2 text-ink font-semibold tracking-tight">
+      <span class="w-2.5 h-2.5 rounded-full bg-coral"></span>
+      <span>Zrozum siebie</span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm text-muted">
+      <a href="#program" class="hover:text-ink transition-colors">Program</a>
+      <a href="#prowadzacy" class="hover:text-ink transition-colors">Prowadzący</a>
+      <a href="#cennik" class="hover:text-ink transition-colors">Cennik</a>
+      <a href="#faq" class="hover:text-ink transition-colors">FAQ</a>
+    </div>
+    <a href="#cennik" class="px-4 py-2 sm:px-5 sm:py-2.5 bg-ink text-cream rounded-full text-sm font-medium hover:bg-coral transition-all duration-300 coral-glow">
+      Od 37 zł
+    </a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="hero" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="blob-1 bg-coral animate-blob" style="top: 10%; left: -100px;"></div>
+    <div class="blob-1 bg-sage animate-blob" style="top: 40%; right: -80px; animation-delay: 4s;"></div>
+    <div class="blob-1" style="background: #E8D5C4; bottom: -50px; left: 40%; animation-delay: 8s; animation-name: blob; animation-duration: 14s; animation-iteration-count: infinite;"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 glass rounded-full text-xs sm:text-sm text-muted mb-7 border border-white/60">
+        <span class="w-2 h-2 rounded-full bg-sage animate-pulse"></span>
+        <span>MindWell Kraków · Psychoedukacja online live</span>
+      </div>
+    </div>
+
+    <h1 class="reveal reveal-delay-1 text-4xl sm:text-6xl md:text-7xl font-medium leading-[1.05] tracking-tight max-w-4xl">
+      Zrozum siebie.<br>
+      <span class="italic font-light text-muted">Działaj inaczej.</span>
+    </h1>
+
+    <p class="reveal reveal-delay-2 mt-7 text-lg sm:text-xl text-muted max-w-2xl leading-relaxed">
+      Pięć spotkań psychoedukacyjnych opartych na dowodach naukowych i terapii poznawczo-behawioralnej.<br>
+      <span class="text-ink/70">Dla osób z ADHD i ich bliskich.</span>
+    </p>
+
+    <div class="reveal reveal-delay-3 mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+      <a href="#cennik" class="group inline-flex items-center justify-center gap-2 px-7 py-4 bg-ink text-cream rounded-full font-medium hover:bg-coralDark transition-all duration-300 coral-glow">
+        Zacznij od 37 zł
+        <span class="transition-transform group-hover:translate-x-1">→</span>
+      </a>
+      <a href="#program" class="inline-flex items-center justify-center gap-2 px-7 py-4 glass border border-white/60 text-ink rounded-full font-medium hover:bg-white/80 transition-all">
+        Zobacz program
+        <span>↓</span>
+      </a>
+    </div>
+
+    <p class="reveal reveal-delay-4 mt-5 text-sm text-muted/80 max-w-xl leading-relaxed">
+      Przetestuj program podczas pierwszego spotkania pod tytułem "Finanse" już 4 czerwca - <span class="text-ink/70">a o reszcie zdecydujesz po tym spotkaniu.</span>
+    </p>
+
+    <div class="reveal reveal-delay-5 mt-14 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl">
+      <div class="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 glass rounded-2xl border border-white/60">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-coral/12 flex items-center justify-center text-coral shrink-0">
+          <i data-lucide="heart-handshake" class="w-5 h-5" stroke-width="1.5"></i>
+        </div>
+        <div class="min-w-0">
+          <div class="text-sm sm:text-base font-medium text-ink leading-tight">Przez ADHDowców</div>
+          <div class="text-xs text-muted mt-0.5 leading-snug">dla osób z ADHD</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 glass rounded-2xl border border-white/60">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-sage/15 flex items-center justify-center text-sageDeep shrink-0">
+          <i data-lucide="clock-9" class="w-5 h-5" stroke-width="1.5"></i>
+        </div>
+        <div class="min-w-0">
+          <div class="text-sm sm:text-base font-medium text-ink leading-tight">4000h+</div>
+          <div class="text-xs text-muted mt-0.5 leading-snug">praktyki twórców</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 glass rounded-2xl border border-white/60">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-coral/12 flex items-center justify-center text-coral shrink-0">
+          <i data-lucide="book-open" class="w-5 h-5" stroke-width="1.5"></i>
+        </div>
+        <div class="min-w-0">
+          <div class="text-sm sm:text-base font-medium text-ink leading-tight">Wiedza naukowa</div>
+          <div class="text-xs text-muted mt-0.5 leading-snug">prowadzi psycholog</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3 sm:gap-4 p-3.5 sm:p-4 glass rounded-2xl border border-white/60">
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-sage/15 flex items-center justify-center text-sageDeep shrink-0">
+          <i data-lucide="video" class="w-5 h-5" stroke-width="1.5"></i>
+        </div>
+        <div class="min-w-0">
+          <div class="text-sm sm:text-base font-medium text-ink leading-tight">90 min online</div>
+          <div class="text-xs text-muted mt-0.5 leading-snug">live z prowadzącym</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MIRROR - TO DLA CIEBIE ============ -->
+<section class="py-20 sm:py-28 relative">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl mb-14 sm:mb-16">
+      <p class="text-xs uppercase tracking-[0.2em] text-coral mb-4 font-medium">To dla ciebie, jeśli...</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        Wiesz, co masz zrobić.<br>
+        <span class="text-muted font-light italic">I właśnie tego nie robisz.</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-4 sm:gap-5">
+      <article class="reveal reveal-delay-1 group relative p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-coral/8 to-sand/30 border border-coral/15 card-hover">
+        <div class="flex items-start gap-5">
+          <span class="text-3xl sm:text-4xl font-light text-coral/60 leading-none tabular-nums">01</span>
+          <p class="text-base sm:text-lg text-ink/85 leading-relaxed">
+            Wiesz, że powinieneś kontrolować finanse, a mimo to kupujesz kolejną rzecz, której nie potrzebujesz - i dopiero wieczorem zauważasz, że znowu poszło więcej, niż planowałeś.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal reveal-delay-2 group relative p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-sage/10 to-warm/40 border border-sage/15 card-hover">
+        <div class="flex items-start gap-5">
+          <span class="text-3xl sm:text-4xl font-light text-sageDeep/60 leading-none tabular-nums">02</span>
+          <p class="text-base sm:text-lg text-ink/85 leading-relaxed">
+            Ciągle zmieniasz pracę, bo po kilku miesiącach każda zaczyna cię męczyć - i nie wiesz, czy chodzi o pracę, czy o ciebie.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal reveal-delay-3 group relative p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-coral/8 to-sand/30 border border-coral/15 card-hover">
+        <div class="flex items-start gap-5">
+          <span class="text-3xl sm:text-4xl font-light text-coral/60 leading-none tabular-nums">03</span>
+          <p class="text-base sm:text-lg text-ink/85 leading-relaxed">
+            Masz diagnozę ADHD, ale tak naprawdę nigdy nic z nią nie zrobiłeś - leży w szufladzie obok wszystkich innych dobrych intencji.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal reveal-delay-4 group relative p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-sage/10 to-warm/40 border border-sage/15 card-hover">
+        <div class="flex items-start gap-5">
+          <span class="text-3xl sm:text-4xl font-light text-sageDeep/60 leading-none tabular-nums">04</span>
+          <p class="text-base sm:text-lg text-ink/85 leading-relaxed">
+            Masz diagnozę, ale nie przeszedłeś psychoedukacji - i nadal nie rozumiesz, jak ADHD wpływa na twoje codzienne decyzje, emocje i relacje.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal reveal-delay-5 group relative p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-coral/8 to-sand/30 border border-coral/15 card-hover">
+        <div class="flex items-start gap-5">
+          <span class="text-3xl sm:text-4xl font-light text-coral/60 leading-none tabular-nums">05</span>
+          <p class="text-base sm:text-lg text-ink/85 leading-relaxed">
+            Reagujesz emocjonalnie szybciej, niż zdążysz pomyśleć - a potem przez kilka dni rozmyślasz, czy nie zraziłeś tym kogoś bliskiego.
+          </p>
+        </div>
+      </article>
+
+      <article class="reveal reveal-delay-5 group relative p-7 sm:p-8 rounded-3xl bg-gradient-to-br from-sage/10 to-warm/40 border border-sage/15 card-hover">
+        <div class="flex items-start gap-5">
+          <span class="text-3xl sm:text-4xl font-light text-sageDeep/60 leading-none tabular-nums">06</span>
+          <p class="text-base sm:text-lg text-ink/85 leading-relaxed">
+            W relacjach czujesz, że ludzie się od ciebie powoli odsuwają - ale trudno ci wskazać moment, w którym coś poszło nie tak.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div class="reveal mt-12 sm:mt-14 max-w-3xl">
+      <p class="text-lg sm:text-xl text-ink/85 leading-relaxed">
+        Jeśli widzisz się choć w części z tych punktów - czytaj dalej.
+      </p>
+      <p class="text-base text-muted mt-3 leading-relaxed">
+        A jeśli rozpoznajesz to u kogoś bliskiego, to być może też jest miejsce dla ciebie - po to, żeby lepiej zrozumieć tę osobę i wiedzieć, jak ją wspierać.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEGATIVE MIRROR - TO NIE DLA CIEBIE ============ -->
+<section class="py-16 sm:py-20 relative">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl mb-10">
+      <p class="text-xs uppercase tracking-[0.2em] text-muted mb-4 font-medium">To nie jest dla ciebie, jeśli...</p>
+      <h2 class="text-2xl sm:text-3xl font-medium leading-tight tracking-tight text-ink/70">
+        Bo nie chcemy żebyś tracił czas <span class="italic font-light">- ani my, ani ty.</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+      <div class="reveal reveal-delay-1 flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-ink/[0.03] border border-ink/[0.06]">
+        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-ink/8 flex items-center justify-center mt-0.5 text-muted">
+          <i data-lucide="x" class="w-4 h-4" stroke-width="2"></i>
+        </div>
+        <p class="text-base text-muted leading-relaxed">
+          Nie chcesz rozumieć, jak funkcjonujesz - wolisz po prostu działać i zobaczyć, co się stanie.
+        </p>
+      </div>
+
+      <div class="reveal reveal-delay-2 flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-ink/[0.03] border border-ink/[0.06]">
+        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-ink/8 flex items-center justify-center mt-0.5 text-muted">
+          <i data-lucide="x" class="w-4 h-4" stroke-width="2"></i>
+        </div>
+        <p class="text-base text-muted leading-relaxed">
+          Szukasz prostych narzędzi, które zadziałają absolutnie zawsze i u każdego, niezależnie od kontekstu.
+        </p>
+      </div>
+
+      <div class="reveal reveal-delay-3 flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-ink/[0.03] border border-ink/[0.06]">
+        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-ink/8 flex items-center justify-center mt-0.5 text-muted">
+          <i data-lucide="x" class="w-4 h-4" stroke-width="2"></i>
+        </div>
+        <p class="text-base text-muted leading-relaxed">
+          Potrzebujesz terapii indywidualnej dopasowanej tylko do twojego przypadku - psychoedukacja grupowa nie zastąpi pracy 1:1.
+        </p>
+      </div>
+
+      <div class="reveal reveal-delay-4 flex items-start gap-4 p-5 sm:p-6 rounded-2xl bg-ink/[0.03] border border-ink/[0.06]">
+        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-ink/8 flex items-center justify-center mt-0.5 text-muted">
+          <i data-lucide="x" class="w-4 h-4" stroke-width="2"></i>
+        </div>
+        <p class="text-base text-muted leading-relaxed">
+          Czujesz, że wiesz już wszystko o ADHD - przeczytałeś książki, oglądałeś kursy i nic nowego ci to nie da.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REFRAME ============ -->
+<section class="py-20 sm:py-28 bg-warm relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute w-96 h-96 rounded-full bg-sage/20 blur-3xl top-10 -right-20"></div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl">
+      <p class="text-xs uppercase tracking-[0.2em] text-sageDeep mb-4 font-medium">Dlaczego tak się dzieje</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        To nie wina charakteru -<br>
+        <span class="italic font-light text-muted">to mechanizm, który można zrozumieć.</span>
+      </h2>
+      <p class="mt-6 text-lg text-ink/80 leading-relaxed max-w-2xl">
+        ADHD to spektrum objawów - u każdej osoby trochę inne. Im lepiej rozumiesz, jak ten mechanizm działa u ciebie, tym większą masz nad nim kontrolę. To pierwsza rzecz, od której zaczynamy.
+      </p>
+    </div>
+
+    <div class="mt-14 sm:mt-20 grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
+      <div class="reveal reveal-delay-1 glass rounded-3xl p-6 sm:p-7 border border-white/60 card-hover">
+        <div class="w-11 h-11 rounded-2xl bg-coral/15 flex items-center justify-center mb-4 text-coral">
+          <i data-lucide="target" class="w-5 h-5" stroke-width="1.75"></i>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Dopamina</h3>
+        <p class="text-muted leading-relaxed text-sm">Mózg ADHD szuka nagrody tu i teraz. Jutro nie istnieje jako motywator.</p>
+      </div>
+      <div class="reveal reveal-delay-2 glass rounded-3xl p-6 sm:p-7 border border-white/60 card-hover">
+        <div class="w-11 h-11 rounded-2xl bg-sage/20 flex items-center justify-center mb-4 text-sageDeep">
+          <i data-lucide="clock" class="w-5 h-5" stroke-width="1.75"></i>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Ślepota czasowa</h3>
+        <p class="text-muted leading-relaxed text-sm">"Jutro" i "za miesiąc" odczuwane są tak samo - jako nieskończoność.</p>
+      </div>
+      <div class="reveal reveal-delay-3 glass rounded-3xl p-6 sm:p-7 border border-white/60 card-hover">
+        <div class="w-11 h-11 rounded-2xl bg-ink/10 flex items-center justify-center mb-4 text-ink">
+          <i data-lucide="eye" class="w-5 h-5" stroke-width="1.75"></i>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Uwaga</h3>
+        <p class="text-muted leading-relaxed text-sm">Nie wybierasz, na co patrzysz. To, co najciekawsze, wygrywa - nawet jeśli nieważne.</p>
+      </div>
+      <div class="reveal reveal-delay-4 glass rounded-3xl p-6 sm:p-7 border border-white/60 card-hover">
+        <div class="w-11 h-11 rounded-2xl bg-coral/15 flex items-center justify-center mb-4 text-coral">
+          <i data-lucide="heart-crack" class="w-5 h-5" stroke-width="1.75"></i>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Nadwrażliwość na odrzucenie</h3>
+        <p class="text-muted leading-relaxed text-sm">Krytyka lub odrzucenie odczuwane jest jak fizyczny ból. Reakcja często nieproporcjonalna do bodźca.</p>
+      </div>
+      <div class="reveal reveal-delay-5 glass rounded-3xl p-6 sm:p-7 border border-white/60 card-hover">
+        <div class="w-11 h-11 rounded-2xl bg-sage/20 flex items-center justify-center mb-4 text-sageDeep">
+          <i data-lucide="award" class="w-5 h-5" stroke-width="1.75"></i>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Perfekcjonizm</h3>
+        <p class="text-muted leading-relaxed text-sm">Paraliż przed startem, bo wszystko musi być idealne. Lepiej nie zacząć, niż zrobić źle.</p>
+      </div>
+      <div class="reveal reveal-delay-5 glass rounded-3xl p-6 sm:p-7 border border-white/60 card-hover">
+        <div class="w-11 h-11 rounded-2xl bg-ink/10 flex items-center justify-center mb-4 text-ink">
+          <i data-lucide="alert-triangle" class="w-5 h-5" stroke-width="1.75"></i>
+        </div>
+        <h3 class="text-lg font-medium mb-2">Motywowanie lękiem</h3>
+        <p class="text-muted leading-relaxed text-sm">Działasz dopiero pod presją deadline'u albo zagrożenia. Bez tego mózg nie widzi powodu, żeby zacząć.</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-14 sm:mt-16 max-w-3xl">
+      <p class="text-xl sm:text-2xl text-ink leading-relaxed font-medium">
+        To wszystko daje wybuchową mieszankę - przez którą ADHD jest czymś, z czym trudno żyć.
+      </p>
+      <p class="mt-4 text-lg text-coral leading-relaxed">
+        My pomagamy ci to poukładać.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAM - 5 SPOTKAŃ ============ -->
+<section id="program" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl mb-14 sm:mb-20">
+      <p class="text-xs uppercase tracking-[0.2em] text-coral mb-4 font-medium">Program</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        Pięć spotkań.<br>
+        <span class="italic font-light text-muted">Pięć obszarów, które są dla ciebie ważne.</span>
+      </h2>
+      <p class="mt-5 text-lg text-muted leading-relaxed">
+        Jeden dokładnie omówiony temat na każdym spotkaniu, tak abyś wyszedł lub wyszła z bardzo konkretnymi narzędziami do wdrożenia w swoim życiu. Możesz to przetestować podczas spotkania o finansach za 37 zł, a o reszcie zdecydować już po tym spotkaniu.
+      </p>
+    </div>
+
+    <div class="space-y-4 sm:space-y-5">
+      <!-- KARTA 1 - FINANSE (wyróżniona) -->
+      <article class="reveal reveal-delay-1 group relative overflow-hidden rounded-3xl bg-gradient-to-br from-coral/10 via-sand/40 to-coral/5 border-2 border-coral/30 p-6 sm:p-10 card-hover">
+        <div class="absolute top-6 right-6 hidden sm:flex items-center gap-2 px-3 py-1.5 bg-coral text-cream rounded-full text-xs font-medium">
+          <span class="w-1.5 h-1.5 rounded-full bg-cream animate-pulse"></span>
+          Próbne · 37 zł
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+          <div class="flex-shrink-0">
+            <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-coral text-cream flex items-center justify-center">
+              <i data-lucide="wallet" class="w-8 h-8 sm:w-9 sm:h-9" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs uppercase tracking-[0.2em] text-coralDark mb-2 font-medium">01 · Finanse · 4 czerwca</p>
+            <h3 class="text-2xl sm:text-4xl font-medium tracking-tight leading-tight mb-3">
+              "Kupuję impulsywnie -<br class="hidden sm:block"> i potem tego żałuję."
+            </h3>
+            <p class="text-base sm:text-lg text-ink/75 leading-relaxed mb-5 max-w-2xl">
+              Zrozumiesz cykl, w którym tkwisz - i nauczysz się nad nim panować.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-white/70 rounded-full text-xs text-muted">impulsywność</span>
+              <span class="px-3 py-1 bg-white/70 rounded-full text-xs text-muted">unikanie</span>
+              <span class="px-3 py-1 bg-white/70 rounded-full text-xs text-muted">wstyd po zakupie</span>
+            </div>
+            <a href="#cennik" class="inline-flex items-center gap-2 px-5 py-3 bg-ink text-cream rounded-full text-sm font-medium hover:bg-coralDark transition-all">
+              Zaczynam tutaj - 37 zł
+              <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- KARTA 2 - MÓZG ADHD -->
+      <article class="reveal reveal-delay-2 glass-warm rounded-3xl border border-white/60 p-6 sm:p-10 card-hover">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+          <div class="flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-sage/20 flex items-center justify-center text-sageDeep">
+              <i data-lucide="brain" class="w-7 h-7" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2 font-medium">02 · Mózg ADHD · 11 czerwca</p>
+            <h3 class="text-xl sm:text-3xl font-medium tracking-tight leading-tight mb-3">
+              "Wiem co mam zrobić - ale i tak tego nie robię."
+            </h3>
+            <p class="text-base sm:text-lg text-ink/75 leading-relaxed mb-3 max-w-2xl">
+              Dlaczego sama wiedza nie wystarcza, dlaczego znowu obiecujesz sobie zmianę - i co z tym faktycznie zrobić.
+            </p>
+            <p class="text-sm text-muted/80">W pakiecie</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- KARTA 3 - EMOCJE -->
+      <article class="reveal reveal-delay-3 glass-warm rounded-3xl border border-white/60 p-6 sm:p-10 card-hover">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+          <div class="flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-coral/15 flex items-center justify-center text-coral">
+              <i data-lucide="waves" class="w-7 h-7" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2 font-medium">03 · Emocje · 18 czerwca</p>
+            <h3 class="text-xl sm:text-3xl font-medium tracking-tight leading-tight mb-3">
+              "Są jak sinusoida, której nie rozumiem."
+            </h3>
+            <p class="text-base sm:text-lg text-ink/75 leading-relaxed mb-3 max-w-2xl">
+              Nauczysz się rozpoznawać emocje, zrozumiesz skąd się biorą - i jak zapanować nad reakcjami.
+            </p>
+            <p class="text-sm text-muted/80">W pakiecie</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- KARTA 4 - PRACA -->
+      <article class="reveal reveal-delay-4 glass-warm rounded-3xl border border-white/60 p-6 sm:p-10 card-hover">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+          <div class="flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-ink/10 flex items-center justify-center text-ink">
+              <i data-lucide="briefcase" class="w-7 h-7" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2 font-medium">04 · Praca · 25 czerwca</p>
+            <h3 class="text-xl sm:text-3xl font-medium tracking-tight leading-tight mb-3">
+              "Przytłoczenie i kolejna zmiana pracy."
+            </h3>
+            <p class="text-base sm:text-lg text-ink/75 leading-relaxed mb-3 max-w-2xl">
+              Dowiesz się jak pracują osoby z ADHD, czego potrzebują, co je motywuje - i jak poradzić sobie z najczęstszymi wyzwaniami.
+            </p>
+            <p class="text-sm text-muted/80">W pakiecie</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- KARTA 5 - RELACJE -->
+      <article class="reveal reveal-delay-5 glass-warm rounded-3xl border border-white/60 p-6 sm:p-10 card-hover">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-6 sm:gap-8">
+          <div class="flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-sage/20 flex items-center justify-center text-sageDeep">
+              <i data-lucide="users" class="w-7 h-7" stroke-width="1.5"></i>
+            </div>
+          </div>
+          <div class="flex-1">
+            <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2 font-medium">05 · Relacje · 2 lipca</p>
+            <h3 class="text-xl sm:text-3xl font-medium tracking-tight leading-tight mb-3">
+              "Czuję, że wszyscy mnie odsuwają."
+            </h3>
+            <p class="text-base sm:text-lg text-ink/75 leading-relaxed mb-3 max-w-2xl">
+              Nadinterpretacja, wycofywanie, eksplozje w relacjach. Zrozumiesz dlaczego tak jest - i jak budować zdrowsze relacje.
+            </p>
+            <p class="text-sm text-muted/80">W pakiecie</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="reveal mt-14 text-center">
+      <a href="#cennik" class="inline-flex items-center gap-2 px-7 py-4 bg-ink text-cream rounded-full font-medium hover:bg-coralDark transition-all duration-300 coral-glow">
+        Biorę cały pakiet - 347 zł
+        <span>→</span>
+      </a>
+      <p class="mt-4 text-sm text-muted">Wczesny dostęp do 4 czerwca, godz. 23:59 · <span class="line-through opacity-60">447 zł</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JAK WYGLĄDA SPOTKANIE ============ -->
+<section class="py-20 sm:py-28 bg-warm relative overflow-hidden">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl mb-14 sm:mb-16">
+      <p class="text-xs uppercase tracking-[0.2em] text-sageDeep mb-4 font-medium">Jak wygląda każde spotkanie</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        Każde spotkanie to 90 minut,<br>
+        <span class="italic font-light text-muted">podczas których przechodzimy przez trzy etapy.</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6">
+      <div class="reveal reveal-delay-1 bg-cream rounded-3xl p-7 sm:p-8 card-hover">
+        <div class="text-5xl sm:text-6xl font-light text-coral mb-3">30%</div>
+        <h3 class="text-lg font-medium mb-2">Wiedza</h3>
+        <p class="text-muted leading-relaxed">Mechanizm i dlaczego tak działa. Bez wody, prosto do sedna.</p>
+      </div>
+      <div class="reveal reveal-delay-2 bg-cream rounded-3xl p-7 sm:p-8 card-hover">
+        <div class="text-5xl sm:text-6xl font-light text-coral mb-3">40%</div>
+        <h3 class="text-lg font-medium mb-2">Case</h3>
+        <p class="text-muted leading-relaxed">Studium realnej osoby. Widzisz, że nie jesteś z tym sam.</p>
+      </div>
+      <div class="reveal reveal-delay-3 bg-cream rounded-3xl p-7 sm:p-8 card-hover">
+        <div class="text-5xl sm:text-6xl font-light text-coral mb-3">30%</div>
+        <h3 class="text-lg font-medium mb-2">Ćwiczenia i narzędzia</h3>
+        <p class="text-muted leading-relaxed">Robisz to teraz, razem z prowadzącym - i wychodzisz z konkretami do wdrożenia.</p>
+      </div>
+    </div>
+
+    <p class="reveal mt-12 text-lg sm:text-xl text-ink/80 max-w-2xl leading-relaxed">
+      Wychodzisz z <span class="text-coral font-medium">jednym</span> realnym narzędziem do wdrożenia w swoim życiu - nie z listą siedemnastu rzeczy, których i tak nie zrobisz.
+    </p>
+  </div>
+</section>
+
+<!-- ============ PROWADZĄCY ============ -->
+<section id="prowadzacy" class="py-20 sm:py-28">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl mb-14">
+      <p class="text-xs uppercase tracking-[0.2em] text-coral mb-4 font-medium">Prowadzący</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        Aleksander Konieczny
+      </h2>
+      <p class="mt-3 text-muted text-lg">Psycholog kliniczny · Psychoonkolog</p>
+    </div>
+
+    <div class="grid md:grid-cols-5 gap-8 sm:gap-12 items-start">
+      <div class="reveal reveal-delay-1 md:col-span-2">
+        <div class="relative inline-block">
+          <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full overflow-hidden ring-coral animate-float">
+            <img src="assets/aleksander.jpg" alt="Aleksander Konieczny - psycholog MindWell" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2 md:col-span-3 space-y-5 text-ink/85 leading-relaxed">
+        <p class="text-lg">
+          Pracuje w <strong>MindWell Kraków</strong> i Przylądku Równowagi.
+        </p>
+        <p>
+          Magister psychologii Uniwersytetu Jagiellońskiego. Ukończył psychoonkologię na UJ Collegium Medicum. W trakcie 5-letniej szkoły psychoterapii systemowej i psychotraumatologii praktycznej.
+        </p>
+        <p>
+          W gabinecie najczęściej pomaga osobom doświadczającym <span class="text-ink font-medium">wypalenia, lęku, samokrytyki i kryzysów emocjonalnych</span> - czyli dokładnie tego, co towarzyszy ADHD na co dzień.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-3 pt-4">
+          <div class="flex items-start gap-3 p-4 glass-warm rounded-2xl border border-white/60">
+            <div class="mt-0.5 flex-shrink-0 text-coral">
+              <i data-lucide="badge-check" class="w-5 h-5" stroke-width="1.75"></i>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium">Certyfikat jakości</div>
+              <div class="text-muted text-xs mt-0.5">2023 · 2024 · 2025</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 glass-warm rounded-2xl border border-white/60">
+            <div class="mt-0.5 flex-shrink-0 text-sageDeep">
+              <i data-lucide="building-2" class="w-5 h-5" stroke-width="1.75"></i>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium">Doświadczenie szpitalne</div>
+              <div class="text-muted text-xs mt-0.5">Paliatywna, hematologia, CZP</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 glass-warm rounded-2xl border border-white/60">
+            <div class="mt-0.5 flex-shrink-0 text-muted">
+              <i data-lucide="graduation-cap" class="w-5 h-5" stroke-width="1.75"></i>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium">UJ + UJ CM</div>
+              <div class="text-muted text-xs mt-0.5">Psychologia + psychoonkologia</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 glass-warm rounded-2xl border border-white/60">
+            <div class="mt-0.5 flex-shrink-0 text-muted">
+              <i data-lucide="book-open-check" class="w-5 h-5" stroke-width="1.75"></i>
+            </div>
+            <div class="text-sm">
+              <div class="font-medium">W trakcie szkoły</div>
+              <div class="text-muted text-xs mt-0.5">Psychoterapia systemowa + traumatologia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section id="cennik" class="py-20 sm:py-28 bg-warm relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute w-96 h-96 rounded-full bg-coral/15 blur-3xl top-20 left-1/2 -translate-x-1/2"></div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal text-center max-w-2xl mx-auto mb-14">
+      <p class="text-xs uppercase tracking-[0.2em] text-coral mb-4 font-medium">Cennik</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        Wybierz jak chcesz zacząć
+      </h2>
+      <p class="mt-4 text-lg text-muted leading-relaxed">
+        Decyzję o całości nie musisz podejmować teraz.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 sm:gap-7 max-w-4xl mx-auto">
+      <!-- PRÓBNE -->
+      <div class="reveal reveal-delay-1 bg-cream rounded-3xl p-7 sm:p-9 border border-sand/60 flex flex-col card-hover">
+        <div class="flex items-start justify-between mb-6">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2 font-medium">Próbne</p>
+            <h3 class="text-2xl font-medium">Pierwsze spotkanie</h3>
+          </div>
+          <div class="w-11 h-11 rounded-2xl bg-coral/10 flex items-center justify-center text-coral">
+            <i data-lucide="wallet" class="w-5 h-5" stroke-width="1.75"></i>
+          </div>
+        </div>
+
+        <p class="text-muted leading-relaxed mb-6">
+          Sprawdzasz format programu i poznajesz prowadzącego. Zobaczysz, jak działa cykl impuls - wstyd - unikanie, i wyjdziesz z konkretnymi narzędziami, które od razu możesz wdrożyć w swoim życiu.
+        </p>
+
+        <div class="mb-7">
+          <div class="flex items-baseline gap-2">
+            <span class="text-5xl font-medium">37</span>
+            <span class="text-xl text-muted">zł</span>
+          </div>
+          <p class="text-sm text-muted mt-1">jedno spotkanie · 4 czerwca, 19:00</p>
+        </div>
+
+        <ul class="space-y-2.5 mb-7 text-sm text-ink/80 flex-1">
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> 90 minut online live z psychologiem</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Omówienie konkretnego przypadku</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Konkretne narzędzia i sposoby działania</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Karta pracy po spotkaniu</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Bez zobowiązania na resztę programu</li>
+        </ul>
+
+        <a href="#" data-stripe="probne" class="block text-center px-6 py-4 bg-cream border-2 border-ink text-ink rounded-full font-medium hover:bg-ink hover:text-cream transition-all">
+          Sprawdzam pierwsze spotkanie
+        </a>
+      </div>
+
+      <!-- PAKIET -->
+      <div class="reveal reveal-delay-2 relative bg-gradient-to-br from-ink to-ink/95 text-cream rounded-3xl p-7 sm:p-9 flex flex-col card-hover">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-coral text-cream rounded-full text-xs font-medium uppercase tracking-wider whitespace-nowrap">
+          ★ Najczęściej wybierane
+        </div>
+
+        <div class="flex items-start justify-between mb-6 mt-2">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-coral mb-2 font-medium">Cały pakiet</p>
+            <h3 class="text-2xl font-medium">5 spotkań</h3>
+          </div>
+          <div class="w-11 h-11 rounded-2xl bg-coral/20 flex items-center justify-center text-coral">
+            <i data-lucide="package" class="w-5 h-5" stroke-width="1.75"></i>
+          </div>
+        </div>
+
+        <p class="text-cream/80 leading-relaxed mb-6">
+          Pięć spotkań, podczas których poznasz mechanizmy ADHD i wyjdziesz z konkretnymi narzędziami do każdego ważnego obszaru życia - od finansów po relacje.
+        </p>
+
+        <div class="mb-7">
+          <div class="flex items-baseline gap-3">
+            <span class="text-5xl font-medium">347</span>
+            <span class="text-xl text-cream/60">zł</span>
+            <span class="text-lg text-cream/40 line-through">447 zł</span>
+          </div>
+          <div class="mt-2 inline-flex items-center gap-2 px-3 py-1 bg-coral/20 rounded-full">
+            <span class="w-1.5 h-1.5 rounded-full bg-coral animate-pulse"></span>
+            <span class="text-sm text-coral font-medium">Wczesny dostęp · oszczędzasz 100 zł</span>
+          </div>
+        </div>
+
+        <ul class="space-y-2.5 mb-5 text-sm text-cream/85 flex-1">
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> 5 spotkań live, każde po 90 minut</li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Tematy: Finanse, Mózg ADHD, Emocje, Praca, Relacje</li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Karty pracy po każdym spotkaniu</li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Materiały oraz nagrania po każdym spotkaniu</li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Cykl 4.06 - 2.07 (czwartki o 19:00)</li>
+        </ul>
+
+        <!-- Countdown -->
+        <div id="countdown-wrap" class="mb-5 p-4 bg-cream/5 rounded-2xl border border-cream/10">
+          <p class="text-xs uppercase tracking-wider text-coral/90 mb-2 font-medium">Wczesny dostęp kończy się za:</p>
+          <div id="countdown" class="grid grid-cols-4 gap-2 text-center">
+            <div><div class="text-2xl font-medium" data-cd="days">--</div><div class="text-xs text-cream/50">dni</div></div>
+            <div><div class="text-2xl font-medium" data-cd="hours">--</div><div class="text-xs text-cream/50">godz</div></div>
+            <div><div class="text-2xl font-medium" data-cd="mins">--</div><div class="text-xs text-cream/50">min</div></div>
+            <div><div class="text-2xl font-medium" data-cd="secs">--</div><div class="text-xs text-cream/50">sek</div></div>
+          </div>
+        </div>
+
+        <a href="#" data-stripe="pakiet" class="block text-center px-6 py-4 bg-coral text-cream rounded-full font-medium hover:bg-coralDark transition-all animate-pulse-soft">
+          Biorę cały pakiet - 347 zł
+        </a>
+      </div>
+    </div>
+
+    <p class="reveal mt-10 text-center text-sm text-muted max-w-xl mx-auto leading-relaxed">
+      Płatność: BLIK, karta, przelew lub możliwość rozłożenia na mniejsze raty (Stripe).<br>
+      Po zakupie dostajesz email z linkiem Zoom i wszystkimi materiałami.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CO WYNIESIESZ ============ -->
+<section class="py-20 sm:py-28">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl mb-14">
+      <p class="text-xs uppercase tracking-[0.2em] text-sageDeep mb-4 font-medium">Co wyniesiesz</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        Po 5 spotkaniach...
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-5 sm:gap-6">
+      <div class="reveal reveal-delay-1 flex items-start gap-5 p-7 glass-warm rounded-3xl border border-white/60 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-sage/20 flex items-center justify-center flex-shrink-0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B8270" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-2">Mniej zmęczenia</h3>
+          <p class="text-muted leading-relaxed">Bo przestajesz walczyć ze sobą. Działasz z mózgiem, nie przeciw niemu.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2 flex items-start gap-5 p-7 glass-warm rounded-3xl border border-white/60 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-coral/15 flex items-center justify-center flex-shrink-0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-2">Mniej wstydu</h3>
+          <p class="text-muted leading-relaxed">Bo wiesz, że to nie wina charakteru. To mechanizm który teraz rozumiesz.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-3 flex items-start gap-5 p-7 glass-warm rounded-3xl border border-white/60 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-ink/10 flex items-center justify-center flex-shrink-0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2A1F1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-2">Więcej stabilności</h3>
+          <p class="text-muted leading-relaxed">Bo masz konkretne narzędzia - nie pojedyncze tipy z TikToka.</p>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-4 flex items-start gap-5 p-7 glass-warm rounded-3xl border border-white/60 card-hover">
+        <div class="w-12 h-12 rounded-2xl bg-coral/15 flex items-center justify-center flex-shrink-0">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-medium mb-2">Realne działanie</h3>
+          <p class="text-muted leading-relaxed">Bez przeciążenia. System zamiast motywacji - bo motywacja nie przyjdzie sama.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="py-20 sm:py-28 bg-warm">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8">
+    <div class="reveal mb-12">
+      <p class="text-xs uppercase tracking-[0.2em] text-coral mb-4 font-medium">FAQ</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        Najczęstsze pytania
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+      <details class="reveal reveal-delay-1 group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Co jeśli nie wiem od czego zacząć?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          Zacznij od próbnego spotkania "Finanse" za 37 zł, 4 czerwca. Sprawdzasz format, prowadzącego i ton - bez zobowiązań. Jeśli ci pasuje, decydujesz o reszcie.
+        </div>
+      </details>
+
+      <details class="reveal reveal-delay-2 group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Czy mogę kupić tylko próbne i nic więcej?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          Tak. Próbne to jedno spotkanie za 37 zł. Nikt cię nie zmusza do reszty. Jeśli po nim zechcesz pakiet - dopłacasz różnicę (mailem na kontakt@terapiamindwell.pl).
+        </div>
+      </details>
+
+      <details class="reveal reveal-delay-3 group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Co jeśli nie zdążę na możliwość wczesnego dostępu?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          Cena wczesnego dostępu (347 zł zamiast 447 zł) obowiązuje wyłącznie do 4 czerwca, godz. 23:59. Po tym terminie ta edycja zostaje zamknięta - pojedyncze spotkania ogłaszamy na Instagramie po pierwszym spotkaniu, na podstawie opinii pierwszych uczestników.
+        </div>
+      </details>
+
+      <details class="reveal reveal-delay-4 group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Czy to terapia?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          Nie. To psychoedukacja - poznasz mechanizm, dostaniesz narzędzia, zrobisz ćwiczenia. Jeśli potrzebujesz terapii indywidualnej, Aleksander przyjmuje w MindWell w Krakowie i online.
+        </div>
+      </details>
+
+      <details class="reveal reveal-delay-5 group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Czy muszę mieć diagnozę ADHD?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          Nie. Spotkania są dla osób, które rozpoznają w sobie te wzorce (lub u kogoś bliskiego), niezależnie od diagnozy. Jeśli zastanawiasz się czy masz ADHD - to też dobre miejsce na start.
+        </div>
+      </details>
+
+      <details class="reveal group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Co dostanę po zakupie?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          Email z potwierdzeniem, linkiem Zoom do najbliższego spotkania, przypomnieniem 24h i 1h przed. Po spotkaniu - karty pracy i materiały do pobrania.
+        </div>
+      </details>
+
+      <details class="reveal group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Czy spotkania będą nagrywane?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          W ramach pakietu udostępniamy nagrania po każdym spotkaniu - możesz wrócić do treści lub nadrobić, jeśli akurat nie udało ci się być na żywo. Spotkanie próbne nie jest nagrywane - liczy się tam obecność na żywo i wspólne ćwiczenia. Zachęcamy do udziału w czasie rzeczywistym, bo największą wartość daje praca razem z prowadzącym.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="py-24 sm:py-32 relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="blob-1 bg-coral animate-blob" style="top: 20%; left: 10%;"></div>
+    <div class="blob-1 bg-sage animate-blob" style="bottom: 0%; right: 5%; animation-delay: 5s;"></div>
+  </div>
+
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+    <div class="reveal">
+      <h2 class="text-3xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight">
+        Pierwszy raz coś o ADHD,<br>
+        <span class="italic font-light text-muted">co nie wymaga od ciebie produktywności na start.</span>
+      </h2>
+    </div>
+
+    <div class="reveal reveal-delay-1 mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
+      <a href="#cennik" class="px-7 py-4 bg-ink text-cream rounded-full font-medium hover:bg-coralDark transition-all coral-glow">
+        Zacznij od 37 zł
+      </a>
+      <a href="#cennik" class="px-7 py-4 bg-coral text-cream rounded-full font-medium hover:bg-coralDark transition-all">
+        Pakiet 347 zł (wczesny dostęp)
+      </a>
+    </div>
+
+    <p class="reveal reveal-delay-2 mt-6 text-sm text-muted">
+      Pierwsze spotkanie · 4 czerwca · 19:00 · Online
+    </p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-cream/80 py-14">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="grid sm:grid-cols-3 gap-8 mb-10">
+      <div>
+        <div class="flex items-center gap-2 text-cream font-medium mb-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-coral"></span>
+          Zrozum siebie
+        </div>
+        <p class="text-sm text-cream/60 leading-relaxed">
+          Psychoedukacja dla osób z ADHD i ich bliskich.<br>
+          Prowadzi Aleksander Konieczny.
+        </p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-cream/40 mb-3 font-medium">Organizatorzy</p>
+        <p class="text-cream mb-2 leading-relaxed">
+          Aleksander Konieczny<br>
+          Beniamin Zwierzyński
+        </p>
+        <p class="text-sm text-cream/60 leading-relaxed">
+          Specjaliści z centrum terapeutycznego<br>
+          <a href="https://terapiamindwell.pl" target="_blank" rel="noopener" class="hover:text-coral transition-colors">MindWell w Krakowie</a>
+        </p>
+      </div>
+      <div>
+        <p class="text-xs uppercase tracking-wider text-cream/40 mb-3 font-medium">Kontakt</p>
+        <a href="mailto:kontakt@terapiamindwell.pl" class="block text-cream hover:text-coral transition-colors text-sm">kontakt@terapiamindwell.pl</a>
+        <a href="tel:+48519349133" class="block text-cream/60 hover:text-coral transition-colors text-sm mt-1">+48 519 349 133</a>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-3 text-xs text-cream/40">
+      <p>© 2026 MindWell. Wszystkie prawa zastrzeżone.</p>
+      <div class="flex gap-5">
+        <a href="regulamin.html" class="hover:text-coral transition-colors">Regulamin</a>
+        <a href="polityka.html" class="hover:text-coral transition-colors">Polityka prywatności</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ============ LUCIDE ICONS ============
+if (window.lucide) {
+  lucide.createIcons();
+}
+
+// ============ COUNTDOWN ============
+// Early bird kończy się 4.06.2026 23:59:59 Europe/Warsaw
+// Europe/Warsaw 5 czerwca 2026 to UTC+2 (CEST), więc 23:59:59 04.06 = 21:59:59 UTC
+const deadline = new Date('2026-06-04T21:59:59Z').getTime();
+
+function updateCountdown() {
+  const now = Date.now();
+  const diff = deadline - now;
+
+  if (diff <= 0) {
+    const wrap = document.getElementById('countdown-wrap');
+    if (wrap) {
+      wrap.innerHTML = '<p class="text-center text-coral font-medium">Early bird się zakończył.</p><p class="text-center text-cream/60 text-sm mt-2">Edycja zamknięta - obserwuj Instagram po pojedyncze spotkania.</p>';
+    }
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  const set = (key, val) => {
+    const el = document.querySelector(`[data-cd="${key}"]`);
+    if (el) el.textContent = String(val).padStart(2, '0');
+  };
+  set('days', days);
+  set('hours', hours);
+  set('mins', mins);
+  set('secs', secs);
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// ============ SCROLL REVEAL ============
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ============ NAV SCROLL ============
+const nav = document.getElementById('nav');
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const cur = window.scrollY;
+  if (cur > 30) {
+    nav.classList.add('bg-cream/85', 'backdrop-blur-md', 'shadow-sm');
+  } else {
+    nav.classList.remove('bg-cream/85', 'backdrop-blur-md', 'shadow-sm');
+  }
+  lastScroll = cur;
+});
+
+// ============ STRIPE LINKS (placeholder) ============
+// Zastąp poniższe URLs prawdziwymi Stripe Payment Links po ich utworzeniu
+const STRIPE_LINKS = {
+  probne: 'https://buy.stripe.com/PLACEHOLDER_PROBNE_37PLN',
+  pakiet: 'https://buy.stripe.com/PLACEHOLDER_PAKIET_347PLN',
+};
+document.querySelectorAll('[data-stripe]').forEach(a => {
+  const key = a.getAttribute('data-stripe');
+  if (STRIPE_LINKS[key]) {
+    a.href = STRIPE_LINKS[key];
+    a.target = '_blank';
+    a.rel = 'noopener';
+  }
+});
+</script>
+
+</body>
+</html>
