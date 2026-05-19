@@ -720,7 +720,7 @@ details[open] summary .faq-icon { transform: rotate(45deg); }
           <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Bez zobowiązania na resztę programu</li>
         </ul>
 
-        <a href="#" data-stripe="probne" class="block text-center px-6 py-4 bg-cream border-2 border-ink text-ink rounded-full font-medium hover:bg-ink hover:text-cream transition-all">
+        <a href="#" data-checkout class="block text-center px-6 py-4 bg-cream border-2 border-ink text-ink rounded-full font-medium hover:bg-ink hover:text-cream transition-all">
           Sprawdzam pierwsze spotkanie
         </a>
       </div>
@@ -776,14 +776,14 @@ details[open] summary .faq-icon { transform: rotate(45deg); }
           </div>
         </div>
 
-        <a href="#" data-stripe="pakiet" class="block text-center px-6 py-4 bg-coral text-cream rounded-full font-medium hover:bg-coralDark transition-all animate-pulse-soft">
+        <a href="#" data-checkout class="block text-center px-6 py-4 bg-coral text-cream rounded-full font-medium hover:bg-coralDark transition-all animate-pulse-soft">
           Biorę cały pakiet - 347 zł
         </a>
       </div>
     </div>
 
     <p class="reveal mt-10 text-center text-sm text-muted max-w-xl mx-auto leading-relaxed">
-      Płatność: BLIK, karta, przelew lub możliwość rozłożenia na mniejsze raty (Stripe).<br>
+      Płatność: BLIK, karta, przelew lub możliwość rozłożenia na mniejsze raty - przez EasyCart.<br>
       Po zakupie dostajesz email z linkiem Zoom i wszystkimi materiałami.
     </p>
   </div>
@@ -1062,19 +1062,12 @@ window.addEventListener('scroll', () => {
   lastScroll = cur;
 });
 
-// ============ STRIPE LINKS (placeholder) ============
-// Zastąp poniższe URLs prawdziwymi Stripe Payment Links po ich utworzeniu
-const STRIPE_LINKS = {
-  probne: 'https://buy.stripe.com/PLACEHOLDER_PROBNE_37PLN',
-  pakiet: 'https://buy.stripe.com/PLACEHOLDER_PAKIET_347PLN',
-};
-document.querySelectorAll('[data-stripe]').forEach(a => {
-  const key = a.getAttribute('data-stripe');
-  if (STRIPE_LINKS[key]) {
-    a.href = STRIPE_LINKS[key];
-    a.target = '_blank';
-    a.rel = 'noopener';
-  }
+// ============ CHECKOUT (EasyCart) ============
+const CHECKOUT_URL = 'https://cart.easy.tools/checkout/8698510/zrozum-siebiedzialaj-inaczej';
+document.querySelectorAll('[data-checkout]').forEach(a => {
+  a.href = CHECKOUT_URL;
+  a.target = '_blank';
+  a.rel = 'noopener';
 });
 </script>
 
