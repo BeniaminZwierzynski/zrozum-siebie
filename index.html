@@ -169,7 +169,7 @@ details[open] summary .faq-icon { transform: rotate(45deg); }
     </div>
 
     <p class="reveal reveal-delay-4 mt-5 text-sm text-muted/80 max-w-xl leading-relaxed">
-      Przetestuj program podczas pierwszego spotkania pod tytułem "Finanse" już 11 czerwca - <span class="text-ink/70">a o reszcie zdecydujesz po tym spotkaniu.</span>
+      Przetestuj program podczas pierwszego spotkania pod tytułem "Finanse" już 11 czerwca - <span class="text-ink/70">a o reszcie zdecydujesz po tym spotkaniu. Przed wydarzeniem SMS-y i emaile z przypomnieniem. Wszystkie spotkania są nagrywane.</span>
     </p>
 
     <div class="reveal reveal-delay-5 mt-14 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl">
@@ -680,112 +680,229 @@ details[open] summary .faq-icon { transform: rotate(45deg); }
     <div class="reveal text-center max-w-2xl mx-auto mb-14">
       <p class="text-xs uppercase tracking-[0.2em] text-coral mb-4 font-medium">Cennik</p>
       <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
-        Wybierz jak chcesz zacząć
+        Zacznij od jednego spotkania
       </h2>
       <p class="mt-4 text-lg text-muted leading-relaxed">
-        Decyzję o całości nie musisz podejmować teraz.
+        Decyzji o całym pakiecie nie musisz podejmować dziś. Sprawdź pierwsze spotkanie, a potem zdecyduj.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-5 sm:gap-7 max-w-4xl mx-auto">
-      <!-- PRÓBNE -->
-      <div class="reveal reveal-delay-1 bg-cream rounded-3xl p-7 sm:p-9 border border-sand/60 flex flex-col card-hover">
-        <div class="flex items-start justify-between mb-6">
-          <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-muted mb-2 font-medium">Próbne</p>
-            <h3 class="text-2xl font-medium">Pierwsze spotkanie</h3>
-          </div>
-          <div class="w-11 h-11 rounded-2xl bg-coral/10 flex items-center justify-center text-coral">
-            <i data-lucide="wallet" class="w-5 h-5" stroke-width="1.75"></i>
-          </div>
-        </div>
-
-        <p class="text-muted leading-relaxed mb-6">
-          Sprawdzasz format programu i poznajesz prowadzącego. Zobaczysz, jak działa cykl impuls - wstyd - unikanie, i wyjdziesz z konkretnymi narzędziami, które od razu możesz wdrożyć w swoim życiu.
-        </p>
-
-        <div class="mb-7">
-          <div class="flex items-baseline gap-2">
-            <span class="text-5xl font-medium">37</span>
-            <span class="text-xl text-muted">zł</span>
-          </div>
-          <p class="text-sm text-muted mt-1">jedno spotkanie · 11 czerwca, 19:00</p>
-        </div>
-
-        <ul class="space-y-2.5 mb-7 text-sm text-ink/80 flex-1">
-          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> 90 minut online live z psychologiem</li>
-          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Omówienie konkretnego przypadku</li>
-          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Konkretne narzędzia i sposoby działania</li>
-          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Karta pracy po spotkaniu</li>
-          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Bez zobowiązania na resztę programu</li>
-        </ul>
-
-        <a href="#" data-checkout class="block text-center px-6 py-4 bg-cream border-2 border-ink text-ink rounded-full font-medium hover:bg-ink hover:text-cream transition-all">
-          Sprawdzam pierwsze spotkanie
-        </a>
-      </div>
-
-      <!-- PAKIET -->
-      <div class="reveal reveal-delay-2 relative bg-gradient-to-br from-ink to-ink/95 text-cream rounded-3xl p-7 sm:p-9 flex flex-col card-hover">
+    <div class="grid md:grid-cols-12 gap-5 sm:gap-7 max-w-5xl mx-auto items-stretch">
+      <!-- PRÓBNE - HERO CARD -->
+      <div class="reveal reveal-delay-1 md:col-span-7 relative bg-gradient-to-br from-cream via-cream to-sand/40 rounded-3xl p-7 sm:p-10 border-2 border-coral/30 flex flex-col card-hover">
         <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-coral text-cream rounded-full text-xs font-medium uppercase tracking-wider whitespace-nowrap">
-          ★ Najczęściej wybierane
+          ★ Polecane na start
         </div>
 
         <div class="flex items-start justify-between mb-6 mt-2">
           <div>
-            <p class="text-xs uppercase tracking-[0.2em] text-coral mb-2 font-medium">Cały pakiet</p>
-            <h3 class="text-2xl font-medium">5 spotkań</h3>
+            <p class="text-xs uppercase tracking-[0.2em] text-coralDark mb-2 font-medium">Zacznij tutaj</p>
+            <h3 class="text-2xl sm:text-3xl font-medium">Pierwsze spotkanie</h3>
+          </div>
+          <div class="w-12 h-12 rounded-2xl bg-coral/15 flex items-center justify-center text-coral">
+            <i data-lucide="wallet" class="w-6 h-6" stroke-width="1.75"></i>
+          </div>
+        </div>
+
+        <p class="text-ink/75 leading-relaxed mb-6">
+          Sprawdzasz format programu, poznajesz prowadzącego, dostajesz konkretne narzędzia w temacie finansów. Bez zobowiązania na resztę programu.
+        </p>
+
+        <div class="mb-6">
+          <div class="flex items-baseline gap-2">
+            <span class="text-6xl sm:text-7xl font-medium">37</span>
+            <span class="text-2xl text-muted">zł</span>
+          </div>
+          <p class="text-sm text-muted mt-1">jedno spotkanie · 11 czerwca, 19:00</p>
+        </div>
+
+        <ul class="space-y-2.5 mb-6 text-sm text-ink/80">
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> 90 minut online live z psychologiem</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Omówienie konkretnego przypadku</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Konkretne narzędzia gotowe do wdrożenia</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Karta pracy po spotkaniu</li>
+          <li class="flex items-start gap-2"><span class="text-sage mt-0.5">✓</span> Nagranie spotkania - dostęp od 12 czerwca, 00:00</li>
+        </ul>
+
+        <!-- KEY UPSELL FRAME -->
+        <div class="mb-6 p-5 bg-coral/8 rounded-2xl border border-coral/25">
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 w-9 h-9 rounded-xl bg-coral text-cream flex items-center justify-center mt-0.5">
+              <i data-lucide="sparkles" class="w-4 h-4" stroke-width="2"></i>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-ink mb-1">A jeśli ci się spodoba?</p>
+              <p class="text-sm text-ink/75 leading-relaxed">
+                Po spotkaniu dostajesz mailem link do dokupu pakietu - <span class="font-medium text-coralDark">dopłacasz 310 zł do 23:59</span> i masz cały pakiet 5 spotkań w cenie wczesnego dostępu (zamiast 447 zł).
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" data-checkout class="block text-center px-6 py-4 bg-ink text-cream rounded-full font-medium hover:bg-coralDark transition-all coral-glow mt-auto">
+          Zaczynam za 37 zł
+        </a>
+      </div>
+
+      <!-- PAKIET OD RAZU - SECONDARY -->
+      <div class="reveal reveal-delay-2 md:col-span-5 relative bg-gradient-to-br from-ink to-ink/95 text-cream rounded-3xl p-7 sm:p-9 flex flex-col card-hover">
+        <div class="flex items-start justify-between mb-6">
+          <div>
+            <p class="text-xs uppercase tracking-[0.2em] text-coral mb-2 font-medium">Wiesz że chcesz całość?</p>
+            <h3 class="text-2xl font-medium">Cały pakiet od razu</h3>
           </div>
           <div class="w-11 h-11 rounded-2xl bg-coral/20 flex items-center justify-center text-coral">
             <i data-lucide="package" class="w-5 h-5" stroke-width="1.75"></i>
           </div>
         </div>
 
-        <p class="text-cream/80 leading-relaxed mb-6">
-          Pięć spotkań, podczas których poznasz mechanizmy ADHD i wyjdziesz z konkretnymi narzędziami do każdego ważnego obszaru życia - od finansów po relacje.
+        <p class="text-cream/75 leading-relaxed mb-6 text-sm">
+          Pięć spotkań - finanse, mózg ADHD, emocje, praca, relacje. Konkretne narzędzia do każdego obszaru.
         </p>
 
-        <div class="mb-7">
-          <div class="flex items-baseline gap-3">
+        <div class="mb-6">
+          <div class="flex items-baseline gap-3 flex-wrap">
             <span class="text-5xl font-medium">347</span>
             <span class="text-xl text-cream/60">zł</span>
-            <span class="text-lg text-cream/40 line-through">447 zł</span>
+            <span class="text-base text-cream/40 line-through">447 zł</span>
           </div>
           <div class="mt-2 inline-flex items-center gap-2 px-3 py-1 bg-coral/20 rounded-full">
             <span class="w-1.5 h-1.5 rounded-full bg-coral animate-pulse"></span>
-            <span class="text-sm text-coral font-medium">Wczesny dostęp · oszczędzasz 100 zł</span>
+            <span class="text-sm text-coral font-medium">Wczesny dostęp · -100 zł</span>
           </div>
         </div>
 
-        <ul class="space-y-2.5 mb-5 text-sm text-cream/85 flex-1">
-          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> 5 spotkań live, każde po 90 minut</li>
-          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Tematy: Finanse, Mózg ADHD, Emocje, Praca, Relacje</li>
-          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Karty pracy po każdym spotkaniu</li>
-          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Materiały oraz nagrania po każdym spotkaniu</li>
-          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Cykl 4.06 - 2.07 (czwartki o 19:00)</li>
+        <ul class="space-y-2 mb-5 text-sm text-cream/85">
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> 5 spotkań live po 90 minut</li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Karty pracy + nagrania po każdym</li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">✓</span> Cykl 11.06 - 9.07 (czwartki, 19:00)</li>
         </ul>
 
-        <!-- Countdown -->
-        <div id="countdown-wrap" class="mb-5 p-4 bg-cream/5 rounded-2xl border border-cream/10">
-          <p class="text-xs uppercase tracking-wider text-coral/90 mb-2 font-medium">Wczesny dostęp kończy się za:</p>
-          <div id="countdown" class="grid grid-cols-4 gap-2 text-center">
-            <div><div class="text-2xl font-medium" data-cd="days">--</div><div class="text-xs text-cream/50">dni</div></div>
-            <div><div class="text-2xl font-medium" data-cd="hours">--</div><div class="text-xs text-cream/50">godz</div></div>
-            <div><div class="text-2xl font-medium" data-cd="mins">--</div><div class="text-xs text-cream/50">min</div></div>
-            <div><div class="text-2xl font-medium" data-cd="secs">--</div><div class="text-xs text-cream/50">sek</div></div>
+        <!-- MBG GUARANTEE FRAME -->
+        <div class="mb-5 p-4 bg-cream/8 rounded-2xl border border-cream/15">
+          <div class="flex items-start gap-3">
+            <div class="flex-shrink-0 w-8 h-8 rounded-xl bg-sage/30 text-cream flex items-center justify-center mt-0.5">
+              <i data-lucide="shield-check" class="w-4 h-4" stroke-width="2"></i>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-cream mb-1">Gwarancja 48h</p>
+              <p class="text-xs text-cream/70 leading-relaxed">
+                Jeśli po pierwszym spotkaniu uznasz, że to nie dla ciebie - zwracamy 100% bez podawania przyczyny. Masz 48h.
+              </p>
+            </div>
           </div>
         </div>
 
-        <a href="#" data-checkout class="block text-center px-6 py-4 bg-coral text-cream rounded-full font-medium hover:bg-coralDark transition-all animate-pulse-soft">
+        <!-- Countdown -->
+        <div id="countdown-wrap" class="mb-5 p-3 bg-cream/5 rounded-2xl border border-cream/10">
+          <p class="text-xs uppercase tracking-wider text-coral/90 mb-2 font-medium text-center">Wczesny dostęp kończy się za:</p>
+          <div id="countdown" class="grid grid-cols-4 gap-1.5 text-center">
+            <div><div class="text-lg font-medium" data-cd="days">--</div><div class="text-[10px] text-cream/50">dni</div></div>
+            <div><div class="text-lg font-medium" data-cd="hours">--</div><div class="text-[10px] text-cream/50">godz</div></div>
+            <div><div class="text-lg font-medium" data-cd="mins">--</div><div class="text-[10px] text-cream/50">min</div></div>
+            <div><div class="text-lg font-medium" data-cd="secs">--</div><div class="text-[10px] text-cream/50">sek</div></div>
+          </div>
+        </div>
+
+        <a href="#" data-checkout class="block text-center px-6 py-3.5 bg-coral text-cream rounded-full font-medium hover:bg-coralDark transition-all text-sm mt-auto">
           Biorę cały pakiet - 347 zł
         </a>
       </div>
     </div>
 
     <p class="reveal mt-10 text-center text-sm text-muted max-w-xl mx-auto leading-relaxed">
-      Płatność: BLIK, karta, przelew lub możliwość rozłożenia na mniejsze raty - przez EasyCart.<br>
-      Po zakupie dostajesz email z linkiem Zoom i wszystkimi materiałami.
+      Płatność: BLIK, karta, przelew lub raty - przez EasyCart.<br>
+      Po zakupie email z linkiem Zoom i wszystkimi materiałami.
     </p>
+  </div>
+</section>
+
+<!-- ============ NAGRANIA / PRZYPOMNIENIA - ADHD SAFETY NET ============ -->
+<section class="py-20 sm:py-28 relative overflow-hidden">
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute w-96 h-96 rounded-full bg-sage/15 blur-3xl top-10 -left-20"></div>
+    <div class="absolute w-96 h-96 rounded-full bg-coral/10 blur-3xl bottom-10 -right-20"></div>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="reveal max-w-3xl mb-12 sm:mb-14">
+      <p class="text-xs uppercase tracking-[0.2em] text-sageDeep mb-4 font-medium">Wiemy, jak działa mózg ADHD</p>
+      <h2 class="text-3xl sm:text-5xl font-medium leading-tight tracking-tight">
+        "A jeśli zapomnę,<br>
+        <span class="italic font-light text-muted">że wydałem 37 zł?"</span>
+      </h2>
+      <p class="mt-6 text-lg text-ink/80 leading-relaxed max-w-2xl">
+        To uzasadniona obawa - mózg ADHD nie pamięta o rzeczach, które nie krzyczą. Dlatego nie liczymy na to, że <em>ty</em> będziesz pamiętać. To <em>my</em> będziemy ci przypominać. Trzy razy, trzema kanałami - i dla pakietu zostają nagrania.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5 sm:gap-6">
+      <!-- WARSTWA 1: EMAILE -->
+      <div class="reveal reveal-delay-1 glass-warm rounded-3xl p-7 border border-white/60 card-hover">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-2xl bg-coral/15 flex items-center justify-center text-coral">
+            <i data-lucide="mail" class="w-5 h-5" stroke-width="1.75"></i>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-coralDark font-medium">Warstwa 1</span>
+        </div>
+        <h3 class="text-xl font-medium mb-3">Emaile z przypomnieniami</h3>
+        <ul class="space-y-2 text-sm text-ink/75 leading-relaxed">
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">·</span><span>Potwierdzenie zakupu z linkiem Zoom</span></li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">·</span><span>Przypomnienie <strong>24h przed</strong> spotkaniem</span></li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">·</span><span>Przypomnienie <strong>1h przed</strong> spotkaniem</span></li>
+        </ul>
+      </div>
+
+      <!-- WARSTWA 2: SMS -->
+      <div class="reveal reveal-delay-2 relative bg-gradient-to-br from-coral/10 via-cream to-sand/30 rounded-3xl p-7 border-2 border-coral/30 card-hover">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-coral text-cream rounded-full text-[10px] font-semibold uppercase tracking-wider whitespace-nowrap">
+          ★ Dla osób z ADHD najważniejsze
+        </div>
+        <div class="flex items-center gap-3 mb-5 mt-2">
+          <div class="w-12 h-12 rounded-2xl bg-coral text-cream flex items-center justify-center">
+            <i data-lucide="message-square" class="w-5 h-5" stroke-width="1.75"></i>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-coralDark font-medium">Warstwa 2</span>
+        </div>
+        <h3 class="text-xl font-medium mb-3">SMS-y przed wydarzeniem</h3>
+        <ul class="space-y-2 text-sm text-ink/75 leading-relaxed">
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">·</span><span>SMS <strong>wieczorem dzień wcześniej</strong> - z linkiem Zoom</span></li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">·</span><span>SMS <strong>30 minut przed</strong> startem</span></li>
+          <li class="flex items-start gap-2"><span class="text-coral mt-0.5">·</span><span>Bo telefon zawsze masz przy sobie - inaczej niż skrzynkę pocztową</span></li>
+        </ul>
+      </div>
+
+      <!-- WARSTWA 3: NAGRANIA -->
+      <div class="reveal reveal-delay-3 glass-warm rounded-3xl p-7 border border-white/60 card-hover">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-2xl bg-sage/20 flex items-center justify-center text-sageDeep">
+            <i data-lucide="video" class="w-5 h-5" stroke-width="1.75"></i>
+          </div>
+          <span class="text-xs uppercase tracking-wider text-sageDeep font-medium">Warstwa 3</span>
+        </div>
+        <h3 class="text-xl font-medium mb-3">Każde spotkanie nagrywane</h3>
+        <ul class="space-y-2 text-sm text-ink/75 leading-relaxed">
+          <li class="flex items-start gap-2"><span class="text-sageDeep mt-0.5">·</span><span><strong>Wszystkie spotkania - w tym próbne</strong> - są nagrywane</span></li>
+          <li class="flex items-start gap-2"><span class="text-sageDeep mt-0.5">·</span><span>Nagranie dostajesz po każdym spotkaniu - <strong>oglądasz kiedy chcesz</strong></span></li>
+          <li class="flex items-start gap-2"><span class="text-sageDeep mt-0.5">·</span><span>Zaśniesz, zapomnisz, nie zdążysz wrócić z pracy - nic ci nie ucieka</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ZAMYKAJĄCY KOMUNIKAT -->
+    <div class="reveal mt-10 max-w-3xl mx-auto p-6 sm:p-7 bg-ink/[0.03] rounded-3xl border border-ink/[0.06]">
+      <div class="flex items-start gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-ink text-cream flex items-center justify-center mt-0.5">
+          <i data-lucide="info" class="w-5 h-5" stroke-width="1.75"></i>
+        </div>
+        <div class="text-sm text-ink/80 leading-relaxed">
+          <p class="mb-2"><strong class="text-ink">Także spotkanie próbne (11 czerwca) jest nagrywane.</strong></p>
+          <p class="text-muted">
+            Najlepiej oczywiście być na żywo, bo wartość daje wspólna praca z prowadzącym: ćwiczenia, pytania, dyskusja. Ale jeśli zapomnisz, nie zdążysz albo coś wypadnie - nagranie czeka. Dostęp do nagrania próbnego otrzymujesz <strong>12 czerwca o 00:00</strong> (po zamknięciu okna dokupu pakietu o 23:59). Nic z 37 zł się nie marnuje.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -867,7 +984,17 @@ details[open] summary .faq-icon { transform: rotate(45deg); }
           <span class="faq-icon text-coral text-2xl font-light">+</span>
         </summary>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
-          Tak. Próbne to jedno spotkanie za 37 zł. Nikt cię nie zmusza do reszty. Jeśli po nim zechcesz pakiet - dopłacasz różnicę (mailem na kontakt@terapiamindwell.pl).
+          Tak. Próbne to jedno spotkanie za 37 zł, bez zobowiązania na resztę. Jeśli po spotkaniu zechcesz pakiet - dostajesz mailem link do dokupu: dopłacasz 310 zł do 23:59 tego samego dnia i masz cały pakiet w cenie wczesnego dostępu (razem 347 zł zamiast 447 zł). Po deadline dokup jest dalej możliwy, ale w cenie standardowej.
+        </div>
+      </details>
+
+      <details class="reveal reveal-delay-2 group glass rounded-2xl border border-white/60 overflow-hidden">
+        <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
+          <span>Co jeśli wezmę cały pakiet, a pierwsze spotkanie mnie nie przekona?</span>
+          <span class="faq-icon text-coral text-2xl font-light">+</span>
+        </summary>
+        <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
+          Masz 48 godzin od pierwszego spotkania (czyli do 13 czerwca, 19:00) na pełny zwrot - bez podawania przyczyny. Wystarczy mail na kontakt@terapiamindwell.pl. Pieniądze wracają w 2-3 dni roboczych. Dostęp do nagrania pierwszego spotkania otrzymujesz dopiero po zamknięciu okna zwrotu.
         </div>
       </details>
 
@@ -907,17 +1034,17 @@ details[open] summary .faq-icon { transform: rotate(45deg); }
           <span class="faq-icon text-coral text-2xl font-light">+</span>
         </summary>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
-          Email z potwierdzeniem, linkiem Zoom do najbliższego spotkania, przypomnieniem 24h i 1h przed. Po spotkaniu - karty pracy i materiały do pobrania.
+          Email z potwierdzeniem i linkiem Zoom. Przed każdym spotkaniem dostajesz przypomnienia: email 24h i 1h przed, plus <strong>SMS wieczorem dnia poprzedniego i 30 minut przed startem</strong>. Po spotkaniu - karty pracy i materiały. Spotkania w pakiecie dodatkowo nagrywane (dostęp po każdym).
         </div>
       </details>
 
       <details class="reveal group glass rounded-2xl border border-white/60 overflow-hidden">
         <summary class="flex items-center justify-between p-5 sm:p-6 font-medium text-ink">
-          <span>Czy spotkania będą nagrywane?</span>
+          <span>A jeśli zapomnę o spotkaniu?</span>
           <span class="faq-icon text-coral text-2xl font-light">+</span>
         </summary>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
-          W ramach pakietu udostępniamy nagrania po każdym spotkaniu - możesz wrócić do treści lub nadrobić, jeśli akurat nie udało ci się być na żywo. Spotkanie próbne nie jest nagrywane - liczy się tam obecność na żywo i wspólne ćwiczenia. Zachęcamy do udziału w czasie rzeczywistym, bo największą wartość daje praca razem z prowadzącym.
+          Mamy trzy zabezpieczenia, dokładnie pod ADHD. <strong>Przed spotkaniem</strong>: email 24h i 1h przed, plus SMS wieczorem dnia poprzedniego i 30 minut przed startem - bo telefon zawsze masz pod ręką. <strong>Po spotkaniu</strong>: wszystkie spotkania - również próbne - są nagrywane. Dla pakietu nagranie dostępne zaraz po każdym spotkaniu. Nagranie próbnego trafia do ciebie 12 czerwca o 00:00 (po zamknięciu okna dokupu pakietu). Najlepiej oczywiście być na żywo (ćwiczenia, dyskusja), ale nic ci nie ucieknie jeśli wypadnie.
         </div>
       </details>
     </div>
@@ -939,17 +1066,19 @@ details[open] summary .faq-icon { transform: rotate(45deg); }
       </h2>
     </div>
 
-    <div class="reveal reveal-delay-1 mt-10 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
-      <a href="#cennik" class="px-7 py-4 bg-ink text-cream rounded-full font-medium hover:bg-coralDark transition-all coral-glow">
-        Zacznij od 37 zł
+    <div class="reveal reveal-delay-1 mt-10 flex flex-col items-center gap-4">
+      <a href="#cennik" class="inline-flex items-center justify-center gap-2 px-9 py-5 bg-ink text-cream rounded-full text-lg font-medium hover:bg-coralDark transition-all coral-glow">
+        Zaczynam za 37 zł
+        <span>→</span>
       </a>
-      <a href="#cennik" class="px-7 py-4 bg-coral text-cream rounded-full font-medium hover:bg-coralDark transition-all">
-        Pakiet 347 zł (wczesny dostęp)
+      <a href="#cennik" class="text-sm text-muted hover:text-ink underline underline-offset-4 decoration-muted/40 hover:decoration-ink transition-all">
+        albo wezmę cały pakiet od razu (347 zł, gwarancja 48h)
       </a>
     </div>
 
     <p class="reveal reveal-delay-2 mt-6 text-sm text-muted">
-      Pierwsze spotkanie · 11 czerwca · 19:00 · Online
+      Pierwsze spotkanie · 11 czerwca · 19:00 · Online<br>
+      SMS + email z przypomnieniem przed startem · Wszystkie spotkania nagrywane
     </p>
   </div>
 </section>
