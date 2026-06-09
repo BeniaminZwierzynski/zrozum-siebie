@@ -850,7 +850,7 @@ src="https://www.facebook.com/tr?id=908497325603598&ev=PageView&noscript=1"
             <div class="flex-1 min-w-0">
               <p class="text-sm font-medium text-ink mb-1">A jeśli ci się spodoba?</p>
               <p class="text-sm text-ink/75 leading-relaxed mb-3">
-                Po spotkaniu dostajesz mailem link do dokupu - <span class="font-medium text-coralDark">dopłacasz 310 zł do 23:59</span> i masz cały pakiet 5 spotkań.
+                Jesteś na spotkaniu? Po nim dostajesz mailem link do dokupu i masz czas <span class="font-medium text-coralDark">aż do piątku 12 czerwca, do końca dnia</span> - dopłacasz 310 zł i masz cały pakiet 5 spotkań.
               </p>
               <div class="flex items-center flex-wrap gap-x-2 gap-y-1 px-3 py-2.5 bg-cream/80 rounded-xl border border-coral/15">
                 <span class="text-base font-semibold text-ink">37 zł</span>
@@ -862,13 +862,24 @@ src="https://www.facebook.com/tr?id=908497325603598&ev=PageView&noscript=1"
                 <span class="text-[11px] text-muted">cały pakiet</span>
               </div>
               <p class="text-xs text-muted mt-2 leading-relaxed">
-                Tyle samo, co wczesny dostęp - twoje 37 zł zalicza się do ceny pakietu. Po 23:59 dokup już w cenie standardowej.
+                Tyle samo, co wczesny dostęp - twoje 37 zł zalicza się do ceny pakietu. Ten przedłużony termin (do piątku) dostają tylko osoby obecne na spotkaniu.
               </p>
             </div>
           </div>
         </div>
 
-        <a href="#" data-checkout class="block text-center px-6 py-4 bg-ink text-cream rounded-full font-medium hover:bg-coralDark transition-all coral-glow mt-auto">
+        <!-- Countdown - zapisy na pierwsze spotkanie -->
+        <div id="countdown1-wrap" class="mb-5 mt-auto p-3 bg-coral/8 rounded-2xl border border-coral/20">
+          <p class="text-xs uppercase tracking-wider text-coralDark mb-2 font-medium text-center">Zapisy zamykamy w czwartek 11.06 o 10:00 - zostało:</p>
+          <div class="grid grid-cols-4 gap-1.5 text-center">
+            <div><div class="text-lg font-medium text-ink" data-cd1="days">--</div><div class="text-[10px] text-muted">dni</div></div>
+            <div><div class="text-lg font-medium text-ink" data-cd1="hours">--</div><div class="text-[10px] text-muted">godz</div></div>
+            <div><div class="text-lg font-medium text-ink" data-cd1="mins">--</div><div class="text-[10px] text-muted">min</div></div>
+            <div><div class="text-lg font-medium text-ink" data-cd1="secs">--</div><div class="text-[10px] text-muted">sek</div></div>
+          </div>
+        </div>
+
+        <a href="#" data-checkout class="block text-center px-6 py-4 bg-ink text-cream rounded-full font-medium hover:bg-coralDark transition-all coral-glow">
           Zaczynam za 37 zł
         </a>
       </div>
@@ -1123,7 +1134,7 @@ src="https://www.facebook.com/tr?id=908497325603598&ev=PageView&noscript=1"
           <span class="faq-icon text-coral text-2xl font-light">+</span>
         </summary>
         <div class="px-5 sm:px-6 pb-5 sm:pb-6 text-muted leading-relaxed">
-          Tak. Próbne to jedno spotkanie za 37 zł, bez zobowiązania na resztę. Jeśli po spotkaniu zechcesz pakiet - dostajesz mailem link do dokupu: dopłacasz 310 zł do 23:59 tego samego dnia i masz cały pakiet w cenie wczesnego dostępu (razem 347 zł zamiast 447 zł). Po deadline dokup jest dalej możliwy, ale w cenie standardowej.
+          Tak. Próbne to jedno spotkanie za 37 zł, bez zobowiązania na resztę. Jeśli po spotkaniu zechcesz pakiet - dostajesz mailem link do dokupu: dopłacasz 310 zł i masz cały pakiet w cenie wczesnego dostępu (razem 347 zł zamiast 447 zł). Ten termin obowiązuje do piątku 12 czerwca, do końca dnia - dla osób, które były na spotkaniu. Po deadline dokup jest dalej możliwy, ale w cenie standardowej.
         </div>
       </details>
 
@@ -1305,6 +1316,39 @@ function updateCountdown() {
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// ============ COUNTDOWN - zapisy na pierwsze spotkanie ============
+// Zapisy kończą się czwartek 11.06.2026 10:00 Europe/Warsaw (CEST = UTC+2) = 08:00:00 UTC
+const deadline1 = new Date('2026-06-11T08:00:00Z').getTime();
+
+function updateCountdown1() {
+  const now = Date.now();
+  const diff = deadline1 - now;
+  const wrap = document.getElementById('countdown1-wrap');
+
+  if (diff <= 0) {
+    if (wrap) {
+      wrap.innerHTML = '<p class="text-center text-coralDark font-medium">Zapisy na pierwsze spotkanie zostały zamknięte.</p>';
+    }
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+  const set = (key, val) => {
+    const el = document.querySelector(`[data-cd1="${key}"]`);
+    if (el) el.textContent = String(val).padStart(2, '0');
+  };
+  set('days', days);
+  set('hours', hours);
+  set('mins', mins);
+  set('secs', secs);
+}
+updateCountdown1();
+setInterval(updateCountdown1, 1000);
 
 // ============ SCROLL REVEAL ============
 const observer = new IntersectionObserver((entries) => {
