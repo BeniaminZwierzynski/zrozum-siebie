@@ -131,6 +131,13 @@ src="https://www.facebook.com/tr?id=908497325603598&ev=PageView&noscript=1"
 
 <!-- ============ NAV ============ -->
 <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <a href="#cennik" id="cd-bar" class="block bg-ink text-cream hover:bg-coralDark transition-colors">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-1.5 flex items-center justify-center gap-2 text-[11px] sm:text-xs leading-none">
+      <span class="w-1.5 h-1.5 rounded-full bg-coral animate-pulse flex-shrink-0"></span>
+      <span class="truncate"><span class="sm:hidden">Zapisy zamykamy czw 10:00 -</span><span class="hidden sm:inline">Zapisy na pierwsze spotkanie zamykamy czwartek 10:00 - zostało</span></span>
+      <span class="font-semibold tabular-nums text-coral flex-shrink-0" data-cd2="full">--:--:--</span>
+    </div>
+  </a>
   <div class="max-w-6xl mx-auto px-5 sm:px-8 py-4 flex items-center justify-between">
     <a href="#hero" class="flex items-center gap-2 text-ink font-semibold tracking-tight">
       <span class="w-2.5 h-2.5 rounded-full bg-coral"></span>
@@ -150,7 +157,7 @@ src="https://www.facebook.com/tr?id=908497325603598&ev=PageView&noscript=1"
 </nav>
 
 <!-- ============ HERO ============ -->
-<header id="hero" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+<header id="hero" class="relative min-h-screen flex items-center pt-28 sm:pt-32 pb-16 overflow-hidden">
   <div class="absolute inset-0 -z-10">
     <div class="blob-1 bg-coral animate-blob" style="top: 10%; left: -100px;"></div>
     <div class="blob-1 bg-sage animate-blob" style="top: 40%; right: -80px; animation-delay: 4s;"></div>
@@ -1325,11 +1332,13 @@ function updateCountdown1() {
   const now = Date.now();
   const diff = deadline1 - now;
   const wrap = document.getElementById('countdown1-wrap');
+  const bar = document.getElementById('cd-bar');
 
   if (diff <= 0) {
     if (wrap) {
       wrap.innerHTML = '<p class="text-center text-coralDark font-medium">Zapisy na pierwsze spotkanie zostały zamknięte.</p>';
     }
+    if (bar) bar.style.display = 'none';
     return;
   }
 
@@ -1346,6 +1355,12 @@ function updateCountdown1() {
   set('hours', hours);
   set('mins', mins);
   set('secs', secs);
+
+  // Pasek w belce - kompaktowy format
+  const pad = (n) => String(n).padStart(2, '0');
+  const full = (days > 0 ? days + 'd ' : '') + pad(hours) + ':' + pad(mins) + ':' + pad(secs);
+  const barEl = document.querySelector('[data-cd2="full"]');
+  if (barEl) barEl.textContent = full;
 }
 updateCountdown1();
 setInterval(updateCountdown1, 1000);
